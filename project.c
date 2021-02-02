@@ -10,7 +10,7 @@
 
 #define RETURNTIME 15
 
-char catagories[][15]={"Computer","Electronics","Electrical","Civil","Mechnnical","Architecture"};
+char catagories[][15]={"Computer","Electronics","Electrical","Civil","Mechanical","Architecture"};
 void returnfunc(void);
 void mainmenu(void);
 void addbooks(void);
@@ -127,10 +127,6 @@ printf("\tLibrary Management System");
 gotoxy(16,4);
 printf("\tMini Project in C");
 gotoxy(16,5);
-printf("\tis brought to you by");
-gotoxy(16,7);
-printf("\tCode with C Team");
-gotoxy(16,8);
 printf("******************************************");
 gotoxy(16,10);
 printf("*******************************************");
@@ -147,7 +143,7 @@ exit(0);
 default:
 {
 gotoxy(10,23);
-printf("\aWrong Entry!!Please re-entered correct option");
+printf("\aInvalid Entry. Please re-enter correct option");
 if(getch())
 mainmenu();
 }
@@ -231,14 +227,14 @@ findbook='t';
 if(findbook!='t')
 {
 gotoxy(10,10);
-printf("No record is found modify the search");
+printf("No record found. Please modify your search query");
 if(getch())
 mainmenu();
 }
 if(findbook=='t' )
 {
 gotoxy(10,9);
-printf("Do you want to delete it?(Y/N):");
+printf("Confirm Delete?(Y/N):");
 if(getch()=='y')
 {
 ft=fopen("test.dat","wb+");  //temporary file for delete
@@ -259,7 +255,7 @@ fp=fopen("Bibek.dat","rb+");    //we want to delete
 if(findbook=='t')
 {
 gotoxy(10,10);
-printf("The record is sucessfully deleted");
+printf("The record is successfully deleted");
 gotoxy(10,11);
 printf("Delete another record?(Y/N)");
 }
@@ -283,7 +279,7 @@ printf("\xDB\xDB\xDB\xB2 1. Search By ID");
 gotoxy(20,14);
 printf("\xDB\xDB\xDB\xB2 2. Search By Name");
 gotoxy( 15,20);
-printf("Enter Your Choice");
+printf("Enter your choice");
 fp=fopen("Bibek.dat","rb+"); //open file for reading propose
 rewind(fp);   //move pointer at the begining of file
 switch(getch())
